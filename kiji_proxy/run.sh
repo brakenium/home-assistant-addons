@@ -56,4 +56,4 @@ else
 fi
 
 bashio::log.info "Starting Kiji Privacy Proxy"
-exec /opt/kiji-proxy/bin/kiji-proxy
+exec /opt/kiji-proxy/run.sh

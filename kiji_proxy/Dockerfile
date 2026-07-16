@@ -7,6 +7,8 @@ RUN apk add --no-cache \
     bash \
     ca-certificates \
     curl \
+    gcompat \
+    libc6-compat \
     jq \
     tar
 
@@ -24,7 +26,7 @@ RUN set -euo pipefail; \
     mkdir -p /opt/kiji-proxy; \
     tar -xzf "/tmp/${ARCHIVE}" -C /opt/kiji-proxy --strip-components=1; \
     rm -f "/tmp/${ARCHIVE}" "/tmp/${ARCHIVE}.sha256"; \
-    chmod +x /opt/kiji-proxy/bin/kiji-proxy /opt/kiji-proxy/run.sh
+    chmod +x /opt/kiji-proxy/run.sh
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh

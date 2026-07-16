@@ -6,6 +6,11 @@ url: https://github.com/dataiku/kiji-proxy
 startup: services
 boot: auto
 init: false
+ingress: true
+ingress_port: 8080
+panel_icon: mdi:shield-lock-outline
+panel_title: Kiji Proxy
+webui: http://[HOST]:[PORT:8080]/
 arch:
   - amd64
 ports:
@@ -31,7 +36,7 @@ options:
   log_requests: false
   log_responses: false
   log_verbose: false
-  serve_ui: false
+  serve_ui: true
 schema:
   openai_api_key: password?
   anthropic_api_key: password?

@@ -34,6 +34,10 @@ integration. The practical setup is:
 4. If TLS errors appear in transparent mode, import and trust the CA from
   `/addon_configs/<slug>/data/certs/ca.crt` on the client making requests.
 
+This add-on exposes the Kiji web UI in the Home Assistant sidebar through
+ingress. After installation, open the add-on from the sidebar and the UI will
+load inside Home Assistant.
+
 Example proxy environment variables:
 
 - HTTP_PROXY=<http://home-assistant-host:8081>
